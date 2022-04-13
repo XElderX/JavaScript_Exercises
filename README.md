@@ -38,3 +38,54 @@ Exercises list:
 // 4)Turime masyvą vardų - iš to masyvo sukonstruokite kitą masyvą, kuriame yra vardai, ilgesni nei 6 
 // simbiliai. Programoje turi būti max 2 masyvai. Gale programos naują masyvą atspausdinkite. (filter)
 
+// #6 Užduotys: 
+// Dešinėje yra kodas, kuris išvardina visus 2D masyvo narius. Nusikopijuokite jį ir modifikuokite pavyzdį
+//  taip, jog būtų suskaičiuota kiek išviso iteracijų buvo padaryta. Paprastas sprendimas tiesiog arr.length
+//   išspausdinti netinka, taip pat netinka arr.length + arr[0].length + … + arr[n].length. 
+// Išspausdinkime konkretų kiekvieno vidinio masyvo narį, tarkim 2-ąjį (pasirinktinai) kiekvieno vidinio masyvo narį.
+var arr = [
+    [1,6,3,7],
+    [9,6,9,3],
+    [5,6,9]
+]
+
+// Išvardinkime visus narius - nested for loop
+for(var i = 0; i < arr.length; i++){
+    // console.log(arr[i]); // arr[i] - masyvas, tai reikia dar vieno ciklo
+    for(var j = 0; j < arr[i].length; j++){
+        console.log(arr[i][j]);
+    }
+}
+// #7 Uždavinys: apačioje yra objektų masyvas personel:
+// Pridėkime į kiekvieno objekto vidų kitą objektą, kuris talpins informaciją apie departamentą, pastarasis turės max 2 savybes.
+// Suformuokite masyvą žmonių, kurie dirba kuriame nors departamente (tarkim visi marketing departameto žmonės) - filtering.
+var personel = [
+    {
+        id: 51,
+        name: "Joana",
+        baseSalary: 450,
+        bonus: true,
+        gender: "female"
+    },
+    {
+        id: 2,
+        name: "Jonas",
+        baseSalary: 600,
+        bonus: false,
+        gender: "male"
+    },
+    {
+        id: 432,
+        name: "Marta",
+        baseSalary: 1005,
+        bonus: true,
+        gender: "female"
+    }
+ ];
+
+//#8 Uždavinys:
+// ** Sugrupuokite visą personalą į grupes pagal departamentą! Palengvinimas: pagal lytį (kur kiekis yra žinomas ir fiksuotas).
+// Pirmiausia, negalime daryti prielaidos, jog žinome, kiek yra departamentų. Taigi turime juos suskaičiuoti. Tai pasakys grupių kiekį / pavadinimus.
+// Tada galime perpanaudoti departments masyvą ir į kiekvieną jame esantį department objektą sudėti lauką: personel: []
+// Arba galime pasidaryti atskirą objektą, kuriame laikysime departamento vardą ir masyvą su darbuotojais. Gautą JSON’ą patikrinkite su įrankiu: 
+

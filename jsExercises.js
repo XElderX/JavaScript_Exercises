@@ -120,6 +120,97 @@ for(i=varduMasyvas.length-1; i>=0; i--){
 // 4)Turime masyvą vardų - iš to masyvo sukonstruokite kitą masyvą, kuriame yra vardai, ilgesni nei 6 
 // simbiliai. Programoje turi būti max 2 masyvai. Gale programos naują masyvą atspausdinkite. (filter)
 
-const varduMasyvas = ["Jonas", "Klaudas", "Frenkis", "Dziuze", "Kleopatra", "Pranas"];
+/* const varduMasyvas = ["Jonas", "Klaudas", "Frenkis", "Dziuze", "Kleopatra", "Pranas"];
 const newVarduMasyvas = varduMasyvas.filter(sixLetter => sixLetter.length > 6);
 console.log(newVarduMasyvas)
+  */
+
+// #6 Užduotys: 
+// Dešinėje yra kodas, kuris išvardina visus 2D masyvo narius. Nusikopijuokite jį ir modifikuokite pavyzdį
+//  taip, jog būtų suskaičiuota kiek išviso iteracijų buvo padaryta. Paprastas sprendimas tiesiog arr.length
+//   išspausdinti netinka, taip pat netinka arr.length + arr[0].length + … + arr[n].length. 
+// Išspausdinkime konkretų kiekvieno vidinio masyvo narį, tarkim 2-ąjį (pasirinktinai) kiekvieno vidinio masyvo narį.
+/* var arr = [
+    [1,6,3,7],
+    [9,6,9,3],
+    [5,6,9]
+]
+let count=null
+// Išvardinkime visus narius - nested for loop
+for(var i = 0; i < arr.length; i++){
+    console.log("spauzdinamas 2-as vidinio masyvo narys: " +arr[i][1])
+    // console.log(arr[i]); // arr[i] - masyvas, tai reikia dar vieno ciklo
+    for(var j = 0; j < arr[i].length; j++){
+        console.log(arr[i][j]);
+        count++//iteraciju skaiciavimas
+    }
+}
+console.log("isviso: ",count)//iteracijos
+ */
+
+// #7 Uždavinys: apačioje yra objektų masyvas personel:
+// 1)Pridėkime į kiekvieno objekto vidų kitą objektą, kuris talpins informaciją apie departamentą, pastarasis turės max 2 savybes.
+// 2)Suformuokite masyvą žmonių, kurie dirba kuriame nors departamente (tarkim visi marketing departameto žmonės) - filtering.
+/* var personel = [
+    {
+        id: 1,
+        name: "Joana",
+        baseSalary: 450,
+        bonus: true,
+        gender: "female"
+    },
+    {
+        id: 8,
+        name: "Jonas",
+        baseSalary: 600,
+        bonus: false,
+        gender: "male"
+    },
+    {
+        id: 144,
+        name: "Marta",
+        baseSalary: 955,
+        bonus: true,
+        gender: "female"
+    },
+    {
+        id: 84,
+        name: "Martin",
+        baseSalary: 1205,
+        bonus: true,
+        gender: "female"
+    }
+ ];
+
+//1) pridedame prie kiekvieno objekto masyve nauja objekta - informacija apie departamenta.
+personel.push({id: 455, name: "Cloude", baseSallary: 10000, gender: "mele"}) // pridetas pirminiame objekto masyve papildomas naujas objektas
+
+for(i=0;i<personel.length;i++){
+    (personel[i].id <=10)?personel[i].department = {depName: "Development HQ" ,rank: "Developer"}
+    :(personel[i].id <100) && (personel[i].id >10)?personel[i].department = {depName: "Development HQ" ,rank: "QA"}
+    :(personel[i].id <200) && (personel[i].id >=100)?personel[i].department = {depName: "Marketing" ,rank: "Seller"}
+    :personel[i].department = {depName: "Manegament" ,rank: "CEO"}
+
+}
+
+//2) filtravimas, isrenkant pagal konkretu pasirinkta kriteriju, pvz pagal  departamento Development HQ dirbanciuosius
+
+let filteredPersonel=[]
+
+for(i=0;i<personel.length;i++){
+if(personel[i].department.depName == "Development HQ"){
+
+filteredPersonel.push(personel[i])
+}
+}
+
+console.log(personel)
+console.log(filteredPersonel) */
+
+ 
+
+//#8 Uždavinys:
+// ** Sugrupuokite visą personalą į grupes pagal departamentą! Palengvinimas: pagal lytį (kur kiekis yra žinomas ir fiksuotas).
+// Pirmiausia, negalime daryti prielaidos, jog žinome, kiek yra departamentų. Taigi turime juos suskaičiuoti. Tai pasakys grupių kiekį / pavadinimus.
+// Tada galime perpanaudoti departments masyvą ir į kiekvieną jame esantį department objektą sudėti lauką: personel: []
+// Arba galime pasidaryti atskirą objektą, kuriame laikysime departamento vardą ir masyvą su darbuotojais. Gautą JSON’ą patikrinkite su įrankiu: 
