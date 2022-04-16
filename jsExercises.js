@@ -214,3 +214,129 @@ console.log(filteredPersonel) */
 // Pirmiausia, negalime daryti prielaidos, jog žinome, kiek yra departamentų. Taigi turime juos suskaičiuoti. Tai pasakys grupių kiekį / pavadinimus.
 // Tada galime perpanaudoti departments masyvą ir į kiekvieną jame esantį department objektą sudėti lauką: personel: []
 // Arba galime pasidaryti atskirą objektą, kuriame laikysime departamento vardą ir masyvą su darbuotojais. Gautą JSON’ą patikrinkite su įrankiu: 
+ 
+/* 
+ let personel = [
+    {
+        id: 1,
+        department: { id: 3, department_name: "Marketing" },
+        name: "Joana",
+        baseSalary: 510,
+        bonus: true,
+        gender: "female"
+    },
+    {
+        id: 8,
+        department: { id: 2, department_name: "IT" },
+        name: "Jonas",
+        baseSalary: 600,
+        bonus: false,
+        gender: "male"
+    },
+    {
+        id: 144,
+        department: { id: 2, department_name: "IT" },
+        name: "Marta",
+        baseSalary: 955,
+        bonus: true,
+        gender: "female"
+    },
+    {
+        id: 84,
+        department: { id: 1, department_name: "Management" },
+        name: "Martin",
+        baseSalary: 1205,
+        bonus: true,
+        gender: "female"
+    },
+    {
+        id: 0,
+        department: { id: 2, department_name: "IT" },
+        name: "Cloudia",
+        baseSalary: 550,
+        bonus: true,
+        gender: "female",
+    },
+    {
+        id: 2,
+        department: { id: 3, department_name: "Marketing" },
+        name: "Boris",
+        baseSalary: 650,
+        bonus: false,
+        gender: "male",
+    }
+ ];
+ let departaments = [];
+
+ for(i=0;i<personel.length; i++){
+    let alreadyInList = false;
+    for(j=0;j<departaments.length;j++){
+       console.log("PerDep: " + personel[i].department + ", Dep: " + departaments[j]);
+       if(personel[i].department.department_name === departaments[j].department_name){
+           alreadyInList = true
+       }
+   }
+    if(alreadyInList === false ){
+       departaments.push(personel[i].department);
+       }
+       console.log(alreadyInList)
+ }
+ console.log(departaments)
+ for(i=0; i < departaments.length; i++){
+     departaments[i].personel = [];
+ for(j=0;j<personel.length;j++){
+     if(departaments[i].department_name===personel[j].department.department_name){
+         departaments[i].personel.push(personel[j])        
+     }
+    }
+ } */
+
+//#9 Uždavinys:
+// Turime masyvą su mokinių informacija, kiekvienas objektas: name ir grades []. Suformuokite naują mokinių masyvą kur kiekvienas objektas turės informaciją: name ir avgGrade.
+// ** Panaudokite pasunkintą užduoties formą ir suskaičiuokite kiekvieno besimokomo dalyko vidurkį (jei norite: medianą, modą ir standartinį nuoktrypį):
+
+/* let students = [
+    { name: "Mindaugas", subject_grades: [ 
+        { subject_name: "Lietuvių", grades: [10, 7, 8] },
+        { subject_name: "Matematika", grades: [10, 7, 8] },
+    ]},
+    { name: "Jonas", subject_grades: [ 
+        { subject_name: "Lietuvių", grades: [5, 7, 8] },
+        { subject_name: "Matematika", grades: [8, 7, 8] },
+    ]},
+];
+
+let vidurkis = [];
+let mokiniuPazymiuSuma = null
+let count =null
+for(i=0;i<students.length;i++){
+
+    
+    for(j=0;j<students[i].subject_grades.length; j++){
+        let subjectPazymiuSuma=null;
+        let subjectVidurkis=null;
+        let mediana = [];
+        let moda = null;
+        
+        for(k=0;k<students[i].subject_grades[j].grades.length;k++){
+            count ++
+            
+            subjectPazymiuSuma+=students[i].subject_grades[j].grades[k];
+            subjectVidurkis=(subjectPazymiuSuma/(k+1)) 
+            mediana.push(students[i].subject_grades[j].grades[k])
+            mediana.sort(function(a,b){
+                return a-b
+            })
+            // console.log(mediana)
+            // console.log(subjectPazymiuSuma);
+            // console.log(subjectVidurkis);
+        }
+        mediana= mediana[Math.round((mediana.length/2)-1)]
+        // console.log(mediana)
+        mokiniuPazymiuSuma+=subjectPazymiuSuma;
+
+        vidurkis.push({"name" : students[i].name, "subject" : students[i].subject_grades[j].subject_name, "sumOfGrade" : subjectPazymiuSuma, "vidurkis" :subjectVidurkis, "mediana" : mediana  });
+    }
+}
+console.log(`visu mokiniu pazymiu vidurkis ${mokiniuPazymiuSuma/count}`)
+console.log(vidurkis);  */
