@@ -89,3 +89,18 @@ var personel = [
 // Tada galime perpanaudoti departments masyvą ir į kiekvieną jame esantį department objektą sudėti lauką: personel: []
 // Arba galime pasidaryti atskirą objektą, kuriame laikysime departamento vardą ir masyvą su darbuotojais. Gautą JSON’ą patikrinkite su įrankiu: 
 
+//#9 Uždavinys:
+// Turime masyvą su mokinių informacija, kiekvienas objektas: name ir grades []. Suformuokite naują mokinių masyvą kur kiekvienas objektas turės informaciją: name ir avgGrade.
+// ** Panaudokite pasunkintą užduoties formą ir suskaičiuokite kiekvieno besimokomo dalyko vidurkį (jei norite: medianą, modą ir standartinį nuoktrypį):
+
+// #10 UŽDUOTIS: Sukurkite funkciją leftPad, kuri padavus stringą ir plotį, kuriame jis turi išsitekti išspausdina stringą dešinėje tarkim: leftPad(text, width) 
+// :  leftPad(‘ab’, 4) → |__ab| <br>
+
+#11.Uždaviniai:
+// faktorialas neigiamiems skaičiams matematiškai nėra apibrėžtas, bet google kalkuliatorius suskaičiuoja! 5! ⇒ -120 ⇒ -(5)! (triukas!). Pamofikuokite klasėje matytą
+//  factorial funkciją, kad veiktų taip kaip google kalkuliatorius. 
+
+#12užduotis
+
+//  padarykite tyrimą - internete raskite rekursyvios funkcijos pavyzdį, kuris jums aiškiausias. Parašykite kodą, kuris jums geriausiai pailiustruotų jos veikimą - parenkite pavyzdį sau pačiam. Nepamirškite, jog pavyzdys, turi būti taip parašytas,
+//   jog po mėnesio sugrįžus būtų visiškai aišku kaip, kas, kam ir kodėl. sužinokite ar galima parašyti arraySum() rekursyviai? Ir jei taip - parašykite, jei ne, pasakykite kodėl.
